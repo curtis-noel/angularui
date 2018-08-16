@@ -20,7 +20,7 @@ phases:
             - aws s3 cp ${BUILD_SRC_FOLDER} s3://${S3_TARGET} --recursive
             - echo Build completed on `date`
 artifacts:
-    files:
+    files: 
         - '**/*'
     base-directory: 'dist'
     discard-paths: yes
