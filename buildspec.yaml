@@ -15,10 +15,10 @@ phases:
             - ng build --${BUILD_ENV}
     post_build:
          commands:
-            - aws s3 cp dist s3://zobair-bucket-angularui-demo --recursive
+            - aws s3 cp dist/Demo2 s3://zobair-bucket-angularui-demo --recursive
             - echo Build completed on `date`
 artifacts:
     files:
         - '**/*'
-    base-directory: 'dist/Demo2'
+    base-directory: 'dist'
     discard-paths: yes
